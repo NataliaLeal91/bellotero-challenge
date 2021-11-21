@@ -1,9 +1,10 @@
 import React, { Fragment } from 'react';
 import { connect } from 'react-redux';
 import { fetchAppData } from '../actions';
+
 import BaseLayout from './BaseLayout';
 
-class Home extends React.Component {
+class Configurator extends React.Component {
   constructor(props) {
     super(props);
 
@@ -22,8 +23,14 @@ class Home extends React.Component {
 
     return (
       <BaseLayout {...this.props}>
-        <div className="mt-20">
-          <h1>asdsad</h1>
+        <div className="red-color bg-login-curved">
+          <div className="flex py-10 justify-center h-40 md:h-96 object-center ">
+            <div className="w-1/2 sm:w-1/3 md:w-1/3 lg:w-1/3 xl:w-1/3">
+            </div>
+          </div>
+        </div>
+        <div className="container mx-auto px-4">
+          <p>Configurator</p>
         </div>
       </BaseLayout>
     );
@@ -39,4 +46,4 @@ const mapStateToProps = (state) => {
 export default connect(
   mapStateToProps,
   { fetchAppData }
-)(Home);
+)(Configurator);

@@ -10,3 +10,35 @@
 .bellotero-cobalt-blue {
   background-color: #071eb3;
 }
+
+.bellotero-text-blue {
+  color: #071eb3;
+}
+
+.menu-items {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-color: #071eb3;
+}
+
+
+.Chef-Maniak {
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #a5a5a5;
+}
+
+.Pete-Zahut {
+  font-family: Roboto;
+  font-size: 32px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: normal;
+  color: #161616;
+}

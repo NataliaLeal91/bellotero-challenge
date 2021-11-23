@@ -18,6 +18,8 @@ class BaseLayout extends React.Component {
   }
   
   menuHeader() {
+    console.log("asdasd", );
+
     return <nav className="bg-white w-full">
       <div className="max-w-6xl mx-auto px-4">
         <div className="flex justify-between">
@@ -32,8 +34,13 @@ class BaseLayout extends React.Component {
             {/* <a href="" className="py-4 px-2 text-green-500 border-t-4 border-green-500 font-semibold ">Home</a> */}
             {this.props.menu && this.props.menu.items ?
               this.props.menu.items.map((item, i) => {
+                const selectedPage = (
+                  this.props.history.location.pathname.includes(item.route)
+                  || (this.props.history.location.pathname === '/' && item.text === 'Testimonial')
+                ) ? "border-t-4 border-green-500 menu-items" : "";
+
                 return <a key={i} onClick={() => this.props.history.push(item.route)}
-                  className="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300">
+                  className={"py-4 px-2 bellotero-text-blue font-bold " + selectedPage}>
                   {item.text}
                 </a>
               })
@@ -41,7 +48,7 @@ class BaseLayout extends React.Component {
           </div>
           <div className="md:hidden flex items-center">
             <button className="outline-none mobile-menu-button">
-            <svg className=" w-6 h-6 text-gray-500 hover:text-green-500 "
+            <svg className=" w-6 h-6 bellotero-text-blue"
               x-show="!showMenu"
               fill="none"
               strokeLinecap="round"
